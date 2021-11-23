@@ -1,0 +1,5 @@
+Fetch new summoners for admins only
+
+add a place to input lol api key
+
+frontend halløj
