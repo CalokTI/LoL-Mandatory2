@@ -1,0 +1,69 @@
+@font-face {
+    font-family: "League";
+    src: url("../fonts/league_regular.ttf") format("truetype");
+}
+
+body {
+    background-color: #21232d;
+}
+
+.index-h1-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40rem;
+    height: 15rem;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-evenly;
+    border-style: unset;
+}
+
+.react-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+
+}
+
+.react-img {
+    width: 30px;
+    height: 30px;
+}
+
+.react-btn:hover {
+    transform: scale(1.05);
+}
+
+.avatar-icon {
+    border-radius: 3rem;
+}
+
+.avatar-icon-div {
+    display: inline-block;
+}
+
+#like-counter {
+    font-weight: bold;
+    color: green;
+    font-size: 25px;
+}
+
+#dislike-counter {
+    margin-left: 1rem;
+    font-weight: bold;
+    color: red;
+    font-size: 25px;
+}
+
+.player-name {
+    text-align: center;
+    margin-top: 0;
+    color: antiquewhite;
+    font-family: League;
+}
+
