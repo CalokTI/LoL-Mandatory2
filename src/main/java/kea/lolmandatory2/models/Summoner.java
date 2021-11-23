@@ -2,10 +2,8 @@ package kea.lolmandatory2.models;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Set;
 
 @Table(name="summoners")
 @Entity
@@ -13,12 +11,13 @@ import javax.persistence.Table;
 public class Summoner {
 
     @Id
+    @Column(length=63)
     private String id;
 
-    @Column
+    @Column(length=56)
     private String accountId;
 
-    @Column
+    @Column(length=78)
     private String puuid;
 
     @Column
@@ -29,6 +28,15 @@ public class Summoner {
 
     @Column
     private long summonerLevel;
+
+    @Column
+    private long friendly;
+
+    @Column
+    private long salty;
+
+    @ManyToMany(mappedBy = "summoners")
+    private Set<Match> matches;
 }
 
 /*
