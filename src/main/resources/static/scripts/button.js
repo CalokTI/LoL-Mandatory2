@@ -1,4 +1,4 @@
-let dislikeCounter = 0;
+/*let dislikeCounter = 0;
 let likeCounter = 0;
 
 
@@ -19,3 +19,5 @@ function dislikeButtonClicked() {
     dislikeCounter++;
     document.getElementById("dislike-counter").innerText = dislikeCounter;
 }
+
+ */

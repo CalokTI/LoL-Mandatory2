@@ -26,13 +26,23 @@ public class Summoners {
     }
 
     @GetMapping("/api/summoners/name/{summonerName}")
-    public Summoner getSummonerByName(@PathVariable String summonerName){
+    public Summoner getSummonerByName(@PathVariable String summonerName) {
         return summoners.findByNameIgnoreCase(summonerName);
     }
 
     @PostMapping("/api/summoners")
     public Summoner addSummoner(@RequestBody Summoner newSummoner) {
         return summoners.save(newSummoner);
+    }
+
+    @PostMapping("/api/summoners/name/{summonerName}/friendly")
+    public Summoner updateFriendlyByName(@PathVariable String summonerName) {
+        return summoners.updateFriendlyByName(summonerName);
+    }
+
+    @PostMapping("/api/summoners/name/{summonerName}/salty")
+    public Summoner updateSaltyByName(@PathVariable String summonerName) {
+        return summoners.updateSaltyByName(summonerName);
     }
 
     @PutMapping("/api/summoners/{summonerId}")

@@ -4,6 +4,7 @@ const name = URLParams.get("name");
 
 const summonerDivWrapper = document.getElementById("div-wrapper");
 
+
 fetch(baseURL + "/api/summoners/name/" + name)
     .then(response => response.json())
     .then(summoner => {
@@ -20,20 +21,20 @@ fetch(baseURL + "/api/summoners/name/" + name)
         </div>
      
          <div class="react-btn-div">
-            <button id="like-btn" class="react-btn">
+            <button id="like-btn" class="react-btn" onclick="likeButtonClicked()">
             <img class="react-img" src="../static/images/3044-pepe-clap.gif" alt="Like Button"></button>                                   
             <i id="like-counter">${escapeHTML(summoner.friendly.toString())}</i>
             <i id="dislike-counter">${escapeHTML(summoner.salty.toString())}</i>
-            <button id="dislike-btn" class="react-btn">
+            <button id="dislike-btn" class="react-btn" onclick="dislikeButtonClicked()">
             <img class="react-img" src="../static/images/SaltShake.gif" alt="Dislike Button"></button>                                                      
-        </div>
+        </div>  
         `
         summonerDivWrapper.appendChild(summonerCard);
         killShot();
     });
 
 
-function killShot(){
+function killShot() {
 
     document.getElementById("avatar-icon").addEventListener("click", killAvatar);
 
@@ -54,4 +55,39 @@ function killShot(){
 }
 
 
+function likeButtonClicked() {
+    fetch(baseURL + "/api/summoners/name/" + name + "/friendly", {
+        method: "POST",
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    }).then(response => {
+        if (response.status === 200) {
+            let likeCounter = document.getElementById("like-counter");
+            likeCounter = parseInt(likeCounter.innerText) + 1;
+            document.getElementById("like-counter").innerText = likeCounter.toString();
+            document.getElementById("like-btn").disabled = true;
+        } else {
+            alert("Button Doesn't work at the moment, please come back. We fight another day")
+        }
+    });
+}
+
+function dislikeButtonClicked() {
+    fetch(baseURL + "/api/summoners/name/" + name + "/salty", {
+        method: "POST",
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    }).then(response => {
+        if (response.status === 200) {
+            let likeCounter = document.getElementById("dislike-counter");
+            likeCounter = parseInt(likeCounter.innerText) + 1;
+            document.getElementById("dislike-counter").innerText = likeCounter.toString();
+            document.getElementById("dislike-btn").disabled = true;
+        } else {
+            alert("Button Doesn't work at the moment, please come back. We fight another day")
+        }
+    });
+}
 
