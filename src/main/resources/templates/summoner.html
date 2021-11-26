@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <link rel="icon" href="../static/images/12118480.ico" type="image/x-icon"/>
     <title>League of Legends Summoner</title>
-    <link rel="stylesheet" href="../static/stylesheets/summoner.css">
     <link rel="stylesheet" href="../static/stylesheets/global.css">
-    <script src="../static/scripts/button.js" defer></script>
-    <script src="../static/scripts/summoner.js" defer></script>
+    <link rel="stylesheet" href="../static/stylesheets/summoner.css">
+    <script src="../static/scripts/HTMLEscape.js"></script>
+
+    <!--  <script src="../static/scripts/button.js" defer></script> -->
+
 </head>
 <header>
     <a href="dashboard.html"><img class="index-h1-logo" src="../static/images/logo-removebg-preview.png"
@@ -17,23 +19,29 @@
 
 <div class="flex-container">
     <div id="div-wrapper">
-        <div class="player-card">
-            <div class="avatar-icon-div">
-                <img id="avatar-icon" class="avatar-icon" src="../static/images/TeemoSquare.webp" alt="character avatar image">
-                <h3 id="summoner-name"></h3>
-            </div>
-            <div class="react-btn-div">
-                <button id="like-btn" class="react-btn"><img class="react-img" src="../static/images/3044-pepe-clap.gif"
-                                                             alt="Like Button"></button>
-                <i id="like-counter">0</i>
-                <i id="dislike-counter">0</i>
-                <button id="dislike-btn" class="react-btn"><img class="react-img" src="../static/images/SaltShake.gif"
-                                                                alt="Dislike Button"></button>
-            </div>
-        </div>
-    </div>
 
+    </div>
 </div>
 
+<script src="../static/scripts/global.js"></script>
+<script src="../static/scripts/summoner.js"></script>
+<script src="../static/scripts/summonerKiller.js"></script>
 </body>
 </html>
+
+<!--
+     <div class="player-card">
+         <div class="avatar-icon-div">
+             <img id="avatar-icon" class="avatar-icon" src="../static/images/TeemoSquare.webp" alt="character avatar image">
+             <h3 id="summoner-name"></h3>
+         </div>
+         <div class="react-btn-div">
+             <button id="like-btn" class="react-btn"><img class="react-img" src="../static/images/3044-pepe-clap.gif"
+                                                          alt="Like Button"></button>
+             <i id="like-counter">0</i>
+             <i id="dislike-counter">0</i>
+             <button id="dislike-btn" class="react-btn"><img class="react-img" src="../static/images/SaltShake.gif"
+                                                             alt="Dislike Button"></button>
+         </div>
+     </div>
+ </div>-->
