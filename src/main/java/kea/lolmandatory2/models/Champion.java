@@ -23,4 +23,10 @@ public class Champion {
 
     @Column
     private String image;
+
+    @Column
+    private String tagOne;
+
+    @Column
+    private String tagTwo;
 }
