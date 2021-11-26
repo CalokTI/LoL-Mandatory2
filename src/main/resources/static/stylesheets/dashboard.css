@@ -1,12 +1,40 @@
-.search-summoner{
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 64px 1.5fr;
+
+    margin-left: 20%;
+    margin-right: 20%;
+
+    gap: 20px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "champions stuff1 stuff2"
+    "ranked ranked f2p";
+}
+
+h4 {border-bottom: 1px white solid; line-height: 30px; color: whitesmoke}
+p {color: whitesmoke; text-align: center}
+
+#free-champions { grid-area: f2p; }
+#free-champions a { text-decoration: none; }
+#free-champions a img { height: 45px;width: 45px; }
+
+#ranked { grid-area: ranked; }
+
+#champions { grid-area: champions; text-align: center; border-right: 1px white solid}
+#champions a {text-decoration: none; color: whitesmoke}
+#champions a:hover {text-decoration: underline}
+
+
+#stuff1 { grid-area: stuff1; }
+
+#stuff2 { grid-area: stuff2; }
+
+
+
+#search-summoner{
     display: block;
     text-align: center;
 }
 
-.search-summoner * {
-    height: 24px;
-}
-
-.search-summoner button {
-    height: 24px;
-}
