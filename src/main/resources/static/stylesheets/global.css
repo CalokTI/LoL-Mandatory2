@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "League";
+    src: url("../fonts/league_regular.ttf") format("truetype");
+}
+
+body {
+    background-color: #21232d;
+}
+
+header{
+    width: -moz-fit-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.index-h1-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40rem;
+    height: 15rem;
+}
