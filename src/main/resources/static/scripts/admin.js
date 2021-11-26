@@ -1,5 +1,5 @@
 document.getElementById("fetch-player").addEventListener("click", fetchSummoner)
-const key = "?api_key=RGAPI-d7474dfd-c5e4-40a7-96db-483c07a92085";
+const key = "?api_key=";
 
 function fetchSummoner() {
     const name = document.getElementById("import-player-name").value;
