@@ -21,13 +21,48 @@ body {
     border-style: unset;
 }
 
+#div-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.player-card {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 2rem
+}
+
+
+.avatar-icon {
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+.avatar-icon:hover {
+    transform: scale(1.04);
+    transition: 0.18s;
+}
+
+.avatar-icon-div {
+    display: inline-block;
+}
+
+.player-name {
+    text-align: center;
+    margin-top: 0;
+    color: antiquewhite;
+    font-family: League;
+}
+
 .react-btn {
     border: none;
     background: none;
     cursor: pointer;
     padding: 0;
     margin: 0;
-
 }
 
 .react-img {
@@ -36,16 +71,9 @@ body {
 }
 
 .react-btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.50);
 }
 
-.avatar-icon {
-    border-radius: 3rem;
-}
-
-.avatar-icon-div {
-    display: inline-block;
-}
 
 #like-counter {
     font-weight: bold;
@@ -54,16 +82,9 @@ body {
 }
 
 #dislike-counter {
-    margin-left: 1rem;
+    margin-left: 1.5rem;
     font-weight: bold;
     color: red;
     font-size: 25px;
-}
-
-.player-name {
-    text-align: center;
-    margin-top: 0;
-    color: antiquewhite;
-    font-family: League;
 }
 
