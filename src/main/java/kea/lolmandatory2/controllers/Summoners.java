@@ -30,18 +30,18 @@ public class Summoners {
         return summoners.save(newSummoner);
     }
 
-    @PutMapping("/api/summoners/{id}")
-    public String updateMatchById(@PathVariable String id, @RequestBody Summoner summonerToUpdateWith) {
-        if (summoners.existsById(id)) {
-            summonerToUpdateWith.setId(id);
+    @PutMapping("/api/summoners/{summonerId}")
+    public String updateMatchById(@PathVariable String summonerId, @RequestBody Summoner summonerToUpdateWith) {
+        if (summoners.existsById(summonerId)) {
+            summonerToUpdateWith.setId(summonerId);
             summoners.save(summonerToUpdateWith);
             return "Summoner is now updated";
         } else return "Summoner id is not found";
     }
 
-    @PatchMapping("/api/summoners/{id}")
-    public String patchMatchById(@PathVariable String id, @RequestBody Summoner newSummoner) {
-        return summoners.findById(id).map(foundSummoner -> {
+    @PatchMapping("/api/summoners/{summonerId}")
+    public String patchMatchById(@PathVariable String summonerId, @RequestBody Summoner newSummoner) {
+        return summoners.findById(summonerId).map(foundSummoner -> {
             if (newSummoner.getAccountId() == null) foundSummoner.setAccountId(newSummoner.getAccountId());
             if (newSummoner.getSummonerLevel() == -1) foundSummoner.setSummonerLevel(newSummoner.getSummonerLevel());
             if (newSummoner.getMatches() == null) foundSummoner.setMatches(newSummoner.getMatches());
@@ -52,13 +52,13 @@ public class Summoners {
             if (newSummoner.getPuuid() == null) foundSummoner.setPuuid(newSummoner.getPuuid());
             summoners.save(foundSummoner);
             return "Summoner Updated";
-        }).orElseThrow(() -> (new ResourceNotFoundException("Summoner with id: " + id + "Was not updated")));
+        }).orElseThrow(() -> (new ResourceNotFoundException("Summoner with id: " + summonerId + "Was not updated")));
     }
 
-    @DeleteMapping("api/summoners/{id}")
-    public String deleteMatchById(@PathVariable String id) {
-        summoners.deleteById(id);
-        return "Summoner with id: " + id + "Has been deleted";
+    @DeleteMapping("api/summoners/{summonerId}")
+    public String deleteMatchById(@PathVariable String summonerId) {
+        summoners.deleteById(summonerId);
+        return "Summoner with id: " + summonerId + "Has been deleted";
     }
 
 
