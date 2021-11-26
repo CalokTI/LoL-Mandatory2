@@ -26,7 +26,6 @@ public class Matches {
 
     @PostMapping("/api/matches")
     public Match addMatch(@RequestBody Match newMatch) {
-        newMatch.setId(null);
         return matches.save(newMatch);
     }
 
