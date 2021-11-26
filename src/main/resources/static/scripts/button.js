@@ -1,5 +1,6 @@
-let likeCounter = 0;
 let dislikeCounter = 0;
+let likeCounter = 0;
+
 
 const clickLikeButton = document.getElementById("like-btn");
 const clickDislikeButton = document.getElementById("dislike-btn");
