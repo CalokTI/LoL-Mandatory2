@@ -1,0 +1,12 @@
+.search-summoner{
+    display: block;
+    text-align: center;
+}
+
+.search-summoner * {
+    height: 24px;
+}
+
+.search-summoner button {
+    height: 24px;
+}
