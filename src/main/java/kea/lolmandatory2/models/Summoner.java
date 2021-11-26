@@ -1,5 +1,6 @@
 package kea.lolmandatory2.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -35,6 +36,7 @@ public class Summoner {
     @Column
     private long salty;
 
+    @JsonIgnore
     @ManyToMany(mappedBy = "summoners")
     private Set<Match> matches;
 }

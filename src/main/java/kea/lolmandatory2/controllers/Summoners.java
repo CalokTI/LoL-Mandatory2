@@ -25,6 +25,11 @@ public class Summoners {
                 .orElseThrow(() -> (new ResourceNotFoundException("Couldn't find any Summoner with id: " + summonerId)));
     }
 
+    @GetMapping("/api/summoners/name/{summonerName}")
+    public Summoner getSummonerByName(@PathVariable String summonerName){
+        return summoners.findByNameIgnoreCase(summonerName);
+    }
+
     @PostMapping("/api/summoners")
     public Summoner addSummoner(@RequestBody Summoner newSummoner) {
         return summoners.save(newSummoner);
