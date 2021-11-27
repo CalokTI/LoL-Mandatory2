@@ -1,0 +1,42 @@
+#match-section {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(675px, 1fr));
+}
+
+.teams {
+    width: 670px;
+    height: 300px;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+#match-team-blue{
+    border: darkblue 2px solid;
+    border-radius: 5px;
+}
+
+#match-team-red{
+    border: darkred 3px solid;
+    border-radius: 5px;
+}
+
+
+.win {
+    box-shadow: 0 0 30px gold;
+}
+
+.defeat {
+    box-shadow: 0 0 30px black;
+}
+
+.card {
+    width: 120px;
+    font-size: 0.9vw;
+    text-align: center;
+}
+
+img {
+    border-radius: 5%;
+}
