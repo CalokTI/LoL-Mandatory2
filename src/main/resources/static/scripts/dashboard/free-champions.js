@@ -33,7 +33,7 @@ function createChampionIcon(champion) {
     console.log("you got champion:" + champion.name)
 
     const iconElement = document.createElement("a");
-    iconElement.href = "champion.html" + "?" + "name=" + champion.name;
+    iconElement.href = "champion.html" + "?" + "id=" + champion.id;
 
     iconElement.innerHTML = `
     <img src="${escapeHTML(champion.image)}">
