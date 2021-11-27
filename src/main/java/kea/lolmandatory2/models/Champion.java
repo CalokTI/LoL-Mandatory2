@@ -21,6 +21,9 @@ public class Champion {
     @Column
     private String title;
 
+    @Column(length = 2000)
+    private String story;
+
     @Column
     private String image;
 

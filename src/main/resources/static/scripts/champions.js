@@ -46,14 +46,3 @@ input.addEventListener('keyup', function (){
         }
     }
 })
-
-
-/*
-const newChampion = {
-    id:championId,
-    name:championName,
-    title:championTitle,
-    image:championImage,
-    tagOne:championTagOne,
-    tagTwo:championTagTwo
-}*/
