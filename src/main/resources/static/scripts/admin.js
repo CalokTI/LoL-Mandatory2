@@ -44,7 +44,7 @@ function createChampion(champion){
     let championId = championKey[2];
     let championName = championKey[3];
     let championTitle = championKey[4];
-    let championImage = ddragonImageBase + championName + ".png";
+    let championImage = ddragonImageBase + championName.replaceAll(" ","").replaceAll(".","").replaceAll("'","") + ".png";
     let championTagOne = championKey[8][0];
     let championTagTwo = championKey[8][1];
 
