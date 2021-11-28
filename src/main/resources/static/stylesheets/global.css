@@ -2,6 +2,9 @@
     font-family: "League";
     src: url("../fonts/league_regular.ttf") format("truetype");
 }
+html{
+    font-family: League;
+}
 
 body {
     background-color: #21232d;

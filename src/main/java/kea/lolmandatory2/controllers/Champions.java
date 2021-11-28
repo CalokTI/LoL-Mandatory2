@@ -1,5 +1,6 @@
 package kea.lolmandatory2.controllers;
 
+import kea.lolmandatory2.exceptions.ResourceNotFoundException;
 import kea.lolmandatory2.models.Champion;
 import kea.lolmandatory2.repositories.ChampionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,17 +15,19 @@ public class Champions {
     ChampionRepository champions;
 
     // Get
-    @GetMapping("/api/champions/{id}")
-    public Champion getChampionById(@PathVariable Long id){return champions.findById(id).get();}
+    @GetMapping("/api/champions/{championId}")
+    public Champion getChampionById(@PathVariable Long championId) {
+        return champions.findById(championId).orElseThrow(() -> (new ResourceNotFoundException("Match with id: " + championId + " does not exist")));
+    }
 
     @GetMapping("api/champions")
-    public List<Champion> getAllChampions(){
+    public List<Champion> getAllChampions() {
         return champions.findAll();
     }
 
     // Post
     @PostMapping("/api/champions")
-    public Champion createChampion(@RequestBody Champion newChampion){
+    public Champion createChampion(@RequestBody Champion newChampion) {
         return champions.save(newChampion);
     }
 

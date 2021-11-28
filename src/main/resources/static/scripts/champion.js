@@ -17,7 +17,7 @@ fetch(baseURL + "/api/champions/" + championId)
         championContainer.innerHTML = `
             <div class="champion-image"><img src="${championImage}" alt="picture of champion ${championName}"></div>
             <strong>${championName}</strong>
-            <strong>${championTitle}</strong>
+            <strong>${championTitle}: </strong><br>
             <span>${championTagOne}  ${championTagTwo}</span>
             <p>${championStory}</p>
             
