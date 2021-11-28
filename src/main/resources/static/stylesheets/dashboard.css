@@ -1,3 +1,16 @@
+@font-face {
+    font-family: "League";
+    src: url("../fonts/league_regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "League";
+    src: url("../fonts/league_regular.ttf") format("truetype");
+}
+html{
+    font-family: League;
+    color: antiquewhite;
+}
+
 main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -13,8 +26,8 @@ main {
     "ranked ranked f2p";
 }
 
-h4 {border-bottom: 1px white solid; line-height: 30px; color: whitesmoke}
-p {color: whitesmoke; text-align: center}
+h4 {border-bottom: 1px white solid; line-height: 30px; color: antiquewhite}
+p {color: antiquewhite; text-align: center}
 
 #free-champions { grid-area: f2p; }
 #free-champions a { text-decoration: none; }
@@ -23,7 +36,7 @@ p {color: whitesmoke; text-align: center}
 #ranked { grid-area: ranked; }
 
 #champions { grid-area: champions; text-align: center; border-right: 1px white solid}
-#champions a {text-decoration: none; color: whitesmoke}
+#champions a {text-decoration: none; color: antiquewhite}
 #champions a:hover {text-decoration: underline}
 
 

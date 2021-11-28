@@ -23,7 +23,7 @@ fetch(baseURL + "/api/champions/" + championId)
             
             
         `
-        console.log(cham)
+        console.log(champion)
     })
 
 /*

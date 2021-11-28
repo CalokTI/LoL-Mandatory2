@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "League";
+    src: url("../fonts/league_regular.ttf") format("truetype");
+}
+html{
+    font-family: League;
+    color: antiquewhite;
+}
