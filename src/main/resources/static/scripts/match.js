@@ -62,7 +62,7 @@ function playerCard(participant) {
         <strong></strong>
         <hr>
         <p>${kills} / ${deaths} / ${assists}</p>
-        <p>${participant.teamId}   ${participant.teamPosition}</p>
+        <p>${participant.teamPosition}</p>
         `
 
     if (firstBlood) {
@@ -86,7 +86,7 @@ async function fetchChampionImage(championId, puuid) {
     fetch(baseURL + "/api/champions/" + championId)
         .then(response => response.json())
         .then(champion => {
-            document.getElementById(puuid).children[0].src = escapeHTML(champion.image);
+            document.getElementById(puuid).children[0].src = champion.image;
         })
 }
 
