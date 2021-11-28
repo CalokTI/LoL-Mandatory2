@@ -1,14 +1,16 @@
 const queryString = window.location.search;
 const URLParams = new URLSearchParams(queryString);
 const name = URLParams.get("name");
+let puuId; //puuId for getting matches
 
 const summonerDivWrapper = document.getElementById("div-wrapper");
-
 
 fetch(baseURL + "/api/summoners/name/" + name)
     .then(response => response.json())
     .then(summoner => {
         console.log(summoner)
+        puuId = summoner.puuid
+        console.log(puuId)
         const summonerCard = document.createElement("div")
         summonerCard.className = "player-card";
 
@@ -30,10 +32,14 @@ fetch(baseURL + "/api/summoners/name/" + name)
         </div>  
         `
         summonerDivWrapper.appendChild(summonerCard);
+        getSummonerMatchHistory()
         killShot();
     });
 
 
+
+
+// fun stuff
 function killShot() {
 
     document.getElementById("avatar-icon").addEventListener("click", killAvatar);
@@ -54,7 +60,7 @@ function killShot() {
     setInterval(reviveAvatar, 5000)
 }
 
-
+// buttons
 function likeButtonClicked() {
     fetch(baseURL + "/api/summoners/name/" + name + "/friendly", {
         method: "POST",

@@ -6,9 +6,10 @@
     <title>League of Legends Summoner</title>
     <link rel="stylesheet" href="../static/stylesheets/global.css">
     <link rel="stylesheet" href="../static/stylesheets/summoner.css">
-    <script src="../static/scripts/HTMLEscape.js"></script>
-
-
+    <script src="../static/scripts/HTMLEscape.js" defer></script>
+    <script src="../static/scripts/global.js" defer></script>
+    <script src="../static/scripts/summoner/summoner.js" defer></script>
+    <script src="../static/scripts/summoner/match-history.js" defer></script>
 </head>
 <header>
     <a href="dashboard.html"><img class="index-h1-logo" src="../static/images/logo-removebg-preview.png"
@@ -21,7 +22,8 @@
     </div>
 </div>
 
-<script src="../static/scripts/global.js"></script>
-<script src="../static/scripts/summoner.js"></script>
+
+<ul id="matches-list"></ul>
+
 </body>
 </html>
